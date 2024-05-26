@@ -1,0 +1,44 @@
+/* src/components/NavBar.css */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: hsla(0, 0%, 6%, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    width: 80%;
+    height: 100%;
+    padding: 6rem 3rem 0;
+    transition: right 0.4s;
+  }
+}
+
+.sabir-title {
+  font-size: 3rem;
+  font-weight: 100;
+  color: #282934;
+}
+
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 200;
+  font-style: serif;
+}
