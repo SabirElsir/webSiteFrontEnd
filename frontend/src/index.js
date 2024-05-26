@@ -1,10 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "./index.css";
+import "../src/styles/index.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { Helmet } from "react-helmet";
 
 // Define reportWebVitals function
 function reportWebVitals(metric) {

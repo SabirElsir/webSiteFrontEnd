@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import "./NavBar.css";
+import "../styles/NavBar.css";
 
 const NavBar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -18,10 +18,8 @@ const NavBar = () => {
       <div class="container">
         <Navbar.Brand as={Link} to="/">
           <div>
-            <h3 id="righteous-regular">
-              SABIR ELSIR ENGINEERING CONSULTANTS <br />
-              صابر السر للاستشارات الهندسية
-            </h3>
+            <h3 class="sabirName">SABIR ELSIR ENGINEERING CONSULTANTS </h3>
+            <h3 class="sabirNameAR">صابر السر للاستشارات الهندسية</h3>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle
