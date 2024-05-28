@@ -1,39 +1,73 @@
-/* src/components/NavBar.css */
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: 100;
+/* NavBar.css */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-.nav-link {
-  font-size: 1.2rem;
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
 }
 
-.navbar-toggler {
-  border: none;
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.navbar-toggler:focus {
-  outline: none;
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-@media screen and (max-width: 1150px) {
-  .nav__menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    background-color: hsla(0, 0%, 6%, 0.2);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    width: 80%;
-    height: 100%;
-    padding: 6rem 3rem 0;
-    transition: right 0.4s;
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
   }
-}
 
-.sabirName {
-  font-size: small;
-}
-.sabirNameAR {
-  font-family: desaturate;
+  .navbar ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .navbar .menu-icon {
+    display: block;
+  }
+
+  .navbar.active ul {
+    display: flex;
+  }
 }
