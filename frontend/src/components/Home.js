@@ -6,11 +6,12 @@ const Home = () => {
   return (
     <div className="container">
       <Helmet>
-        <title>SABIR ELSIR ENG CONS | Home</title>
+        <title>SABIR ELSIR ENG CONS</title>
       </Helmet>
 
-      <h2>Home Page</h2>
       <p>Welcome to the Home page!</p>
+      <br />
+      <br />
     </div>
   );
 };

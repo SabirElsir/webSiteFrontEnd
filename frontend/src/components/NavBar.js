@@ -1,52 +1,40 @@
-// src/components/NavBar.js
+// NavBar.js
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Navbar, Nav, Container } from "react-bootstrap";
 import "../styles/NavBar.css";
+// NavBar.js
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const NavBar = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const handleToggle = () => {
+    setIsActive(!isActive);
+  };
 
   return (
-    <Navbar
-      expanded={expanded}
-      expand="lg"
-      bg="dark"
-      variant="dark"
-      sticky="top"
-    >
-      <div class="container">
-        <Navbar.Brand as={Link} to="/">
-          <div>
-            <h3 class="sabirName">SABIR ELSIR ENGINEERING CONSULTANTS </h3>
-            <h3 class="sabirNameAR">صابر السر للاستشارات الهندسية</h3>
-          </div>
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          onClick={() => setExpanded(expanded ? false : "expanded")}
-        >
-          <i className={expanded ? "fas fa-times" : "fas fa-bars"}></i>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)}>
-              Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="/about" onClick={() => setExpanded(false)}>
-              About
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/contact"
-              onClick={() => setExpanded(false)}
-            >
-              Contact
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+    <nav className={`navbar ${isActive ? "active" : ""}`}>
+      <div className="logo">
+        <img src="../images/logo.png" height={50} />
+        Sabir Elsir Engineering Consultants
       </div>
-    </Navbar>
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <div className="menu-icon" onClick={handleToggle}>
+        <i className={`fas ${isActive ? "fa-times" : "fa-bars"}`}></i>
+      </div>
+    </nav>
   );
 };
 
