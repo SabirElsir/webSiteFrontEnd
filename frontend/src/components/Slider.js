@@ -5,32 +5,25 @@ const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [items, setItems] = useState([
     {
-      img: "../images/img1.jpg",
-      author: "LUNDEV",
-      title: "DESIGN SLIDER",
+      img: "../images/2.jpg",
+      title: "House SLIDER",
       topic: "ANIMAL",
-      des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?",
     },
     {
-      img: "../images/img2.jpg",
-      author: "LUNDEV",
-      title: "DESIGN SLIDER",
-      topic: "ANIMAL",
-      des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?",
+      img: "../images/3.jpg",
+
+      topic: "COMMERCIAL",
     },
     {
-      img: "../images/img3.jpg",
-      author: "LUNDEV",
+      img: "../images/4.jpg",
+
       title: "DESIGN SLIDER",
       topic: "ANIMAL",
-      des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?",
     },
     {
-      img: "../images/img4.jpg",
-      author: "LUNDEV",
-      title: "DESIGN SLIDER",
-      topic: "ANIMAL",
-      des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?",
+      img: "../images/8.jpg",
+      title: "MODERN",
+      topic: " RESTAURANT",
     },
   ]);
 
@@ -92,16 +85,10 @@ const Carousel = () => {
             key={index}
             className={`item ${index === currentIndex ? "active" : ""}`}
           >
-            <img src={item.img} alt={item.title} />
+            <img src={item.img} height={189} alt={item.title} />
             <div className="content">
-              <div className="author">{item.author}</div>
               <div className="title">{item.title}</div>
               <div className="topic">{item.topic}</div>
-              <div className="des">{item.des}</div>
-              <div className="buttons">
-                <button>SEE MORE</button>
-                <button>SUBSCRIBE</button>
-              </div>
             </div>
           </div>
         ))}
