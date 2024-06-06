@@ -1,12 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+body {
+  margin: 0;
+  background-color: #000;
+  color: #eee;
+  font-family: Poppins;
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+}
+header {
+  width: 1140px;
+  max-width: 80%;
+  margin: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+header a {
+  color: #eee;
+  margin-right: 40px;
+}
 /* carousel */
 .carousel {
   height: 800px;
 
-  margin: 30px 0px;
   width: 100vw;
-  padding-left: 100px;
   overflow: hidden;
   position: relative;
 }
@@ -19,7 +40,6 @@
 .carousel .list .item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 .carousel .list .item .content {
   position: absolute;
@@ -42,6 +62,8 @@
   font-size: 5em;
   font-weight: bold;
   line-height: 1.3em;
+  text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black; /* Text shadow with multiple layers */
+  animation: glow 1.5s infinite alternate; /* Animation effect */
 }
 .carousel .list .item .topic {
   color: #f1683a;
@@ -278,29 +300,46 @@
     opacity: 0;
   }
 }
-@media screen and (max-width: 678px) {
-  .carousel .list .item .content {
-    padding-right: 0;
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+    height: 450px;
   }
-  .carousel .list .item .content .title {
-    font-size: 30px;
-  }
-}
 
-@media only screen and (min-width: 1200px) {
-  .carousel .list .item img {
-    width: 98%;
+  .list .item {
+    flex: 0 0 100%; /* Make each item take up the full width on smaller screens */
   }
-}
 
-@media only screen and (min-width: 1024px) {
-  .carousel .list .item img {
-    display: flex;
+  .thumbnail {
+    height: 50px;
+    width: 90px;
+
+    /* Allow thumbnails to wrap onto multiple lines */
   }
-}
 
-@media only screen and (max-width: 1024px) {
-  .carousel .list .item img {
-    margin-bottom: 2rem;
+  .thumbnail .item {
+    flex: 0 0 50%; /* Make each thumbnail take up 50% of the width on smaller screens */
+    max-width: 50%; /* Limit the width of thumbnails to 50% */
+  }
+
+  .arrows {
+    top: auto; /* Reset the top position */
+    bottom: 20px; /* Position arrows 20px from the bottom */
+    right: 50%; /* Center arrows horizontally */
+    transform: translateX(50%); /* Adjust for centering */
+    width: auto; /* Allow width to be based on content */
+    max-width: 90%; /* Limit the maximum width for smaller screens */
+  }
+
+  .arrows button {
+    font-size: 20px; /* Reduce font size for smaller screens */
+    width: 30px; /* Reduce button width for smaller screens */
+    height: 30px; /* Reduce button height for smaller screens */
+  }
+  .carousel .list .item .title,
+  .carousel .list .item .topic {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.3em;
   }
 }

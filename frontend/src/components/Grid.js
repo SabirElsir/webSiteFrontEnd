@@ -6,17 +6,17 @@ import "../styles/Gird.css";
 const data = [
   {
     id: 1,
-    imgSrc: "../images/4.jpg",
-    videoSrc: "../Videos/.mp4",
-    title: "Card Title 1",
+    imgSrc: "../images/P13.jpg",
+
+    title: "Mosque",
     text: "This is the first card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
   },
   {
     id: 2,
-    imgSrc: "../images/3.jpg",
+    imgSrc: "../images/Fire.jpg",
 
-    title: "Card Title 2",
-    text: "This is the second card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    title: "Design Outdoor Space",
+    text: "Enhancing Mental Well-being through Outdoor Living with Sustainable Landscape Materials.",
   },
 ];
 function Grid() {

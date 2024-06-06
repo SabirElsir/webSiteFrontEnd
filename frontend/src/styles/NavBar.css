@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .navbar {
   background: #fff;
-  height: 80px;
+  text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black; /* Text shadow with multiple layers */
+  height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +11,15 @@
   top: 0;
   z-index: 999;
 }
+.navbar-container img {
+  float: left;
+  max-width: 100%;
+  height: auto;
+  /* Optional: Add some padding or margin if needed */
+  margin-right: 10px; /* Example margin to separate the image from other content */
+}
+
+/* Clear float if there are issues with the container height */
 
 .navbar-container {
   display: flex;
@@ -22,11 +32,11 @@
 .navbar-logo {
   color: black;
   justify-self: start;
-  margin-left: 15px;
+  margin-left: 10px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1.2rem;
-  font-family: monospace;
+  font-family: Poppins;
 
   font-weight: bold;
 }
@@ -58,7 +68,12 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
-  font-family: monospace;
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff; /* Text color */
+  text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black; /* Text shadow with multiple layers */
+  animation: glow 1.5s infinite alternate; /* Animation effect */
 }
 
 .nav-links:hover {
@@ -67,7 +82,7 @@
 }
 
 .fa-bars {
-  color: #fff;
+  color: black;
 }
 
 .nav-links-mobile {
@@ -81,6 +96,11 @@
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
+  }
+  .navbar-container img {
+    margin-right: 5px; /* Reduce margin for smaller screens */
+    width: 200px;
+    height: 60px;
   }
 
   .nav-menu {
@@ -96,7 +116,7 @@
   }
 
   .nav-menu.active {
-    background: #242222;
+    background: #fff;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -107,7 +127,10 @@
     text-align: center;
     padding: 2rem;
     width: 100%;
-    display: table;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the links horizontally */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow links to wrap onto multiple lines if necessary */
   }
 
   .nav-links:hover {
@@ -134,7 +157,7 @@
   }
 
   .fa-times {
-    color: #fff;
+    color: black;
     font-size: 2rem;
   }
 

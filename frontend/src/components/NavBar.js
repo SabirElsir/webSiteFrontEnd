@@ -29,7 +29,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Sabir Elsir Engineering Consultants
+            <img src="../images/logo-part.jpeg" height={90} width={350} />
             <i class="fab fa-typo" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>

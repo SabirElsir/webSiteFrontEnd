@@ -6,24 +6,24 @@ const Carousel = () => {
   const [items, setItems] = useState([
     {
       img: "../images/2.jpg",
-      title: "House SLIDER",
-      topic: "ANIMAL",
+      title: " COMMERCIAL",
+      topic: "BULIDING",
     },
     {
-      img: "../images/3.jpg",
-
-      topic: "COMMERCIAL",
+      img: "../images/6.jpg",
+      title: "MODERN ",
+      topic: "HOUSE",
     },
     {
       img: "../images/4.jpg",
 
-      title: "DESIGN SLIDER",
-      topic: "ANIMAL",
+      title: "MODERN ",
+      topic: "RESTAURANT",
     },
     {
       img: "../images/8.jpg",
-      title: "MODERN",
-      topic: " RESTAURANT",
+      title: " RESIDENTIAL",
+      topic: "BULIDING",
     },
   ]);
 
